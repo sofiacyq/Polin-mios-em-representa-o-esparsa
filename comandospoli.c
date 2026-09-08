@@ -31,7 +31,7 @@ int main(void){
 /* como todas as especificacoes dos comandos estao no enunciado nao comentarei o que cada um faz, 
 por isso essa parte do codigo tera uma quantidade menor de comentarios, ja que so chamaremos as funcoes ja criadas 
 no tadelista.c e tabela.c, la ja tem as explicacoes */
-    while(scanf("%63s", comando) == 1){
+    while(scanf(" %63s", comando) == 1){
 
         if(strcmp(comando, "FIM") == 0){//quando fazemos a comparacao com o funcao da biblioteca string ela retorna 0 se as palavras forem exatamente iguais
             break;
