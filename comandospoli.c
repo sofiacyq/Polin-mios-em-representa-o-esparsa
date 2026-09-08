@@ -46,7 +46,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             Polinomio *Novo = criapolinomio();
             for(int i = 0; i < j; i++){
                 long long coef, Grau;
-                scanf("%ld %d", &coef, &Grau);
+                scanf("%lld %lld", &coef, &Grau);
                 inserepoli(Novo, coef, Grau);
             }
             //como dito def pode redefir e definir nomes, entao chamamos a funcao criada na tabela para liberar caso o nome ja exista
@@ -81,7 +81,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long coef, Grau;
 
-            scanf("%32s %ld %d", Nome, &coef, &Grau);
+            scanf("%32s %lld %lld", Nome, &coef, &Grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
             inserepoli(A, coef, Grau);
@@ -91,7 +91,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long c;
 
-            scanf("%32s %ld", Nome, &c);
+            scanf("%32s %lld", Nome, &c);
             
             Polinomio *A = busca_erro(&tab, Nome);
             escala(A, c);
@@ -101,7 +101,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long grau;
 
-            scanf("%32s %d", Nome, &grau);
+            scanf("%32s %lld", Nome, &grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
 
@@ -133,10 +133,10 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long Grau;
 
-            scanf("%32s %d", Nome, &Grau);
+            scanf("%32s %lld", Nome, &Grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
-            printf("%.2f", coeficiente(A, Grau));
+            printf("%lld", coeficiente(A, Grau));
         }
 
         else if(strcmp(comando, "GRAU") == 0){
@@ -145,7 +145,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             scanf("%32s", Nome);
 
             Polinomio *A = busca_erro(&tab, Nome);
-            printf("%d", graumax(A));
+            printf("%lld", graumax(A));
         }
 
         else if(strcmp(comando, "IMPRIME") == 0){
