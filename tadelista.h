@@ -28,7 +28,7 @@ long long graumax(Polinomio *poli);
 Polinomio *soma(Polinomio *A, Polinomio *B);
 Polinomio *multiplica(Polinomio *A, Polinomio *B);
 void escala(Polinomio *poli, long long C);
-void impriprime_poli(Polinomio *poli);
+void imprime_poli(Polinomio *poli);
 void imprime_inverso(Polinomio *poli);
 #endif
 
