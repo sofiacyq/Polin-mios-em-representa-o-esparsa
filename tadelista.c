@@ -374,8 +374,8 @@ void imprime_poli(Polinomio *poli){
         /* vamos utilizar o not aqui para controlar o espaço, nao queremos que tenha um espaço antes do primeiro termo
         assim com a porta logica os valores sao invertidos, se e 1/verdadeiro vira 0/falso, assim podemos pensar, se for 
         o primeiro termo nao imprima o espaco */
-        
-        printf("%lld*x^%lld", atual -> termo.coeficiente, atual -> termo.grau);
+     
+        printf("%.2f*x^%d", atual -> termo.coeficiente, atual -> termo.grau);
         prim = 0;
         atual = atual -> prox;
 
@@ -423,7 +423,7 @@ void imprime_inverso(Polinomio *poli){
             printf(" ");
         }
 
-        printf("%lld*x^%lld", atual -> termo.coeficiente, atual -> termo.grau);
+        printf("%.2f*x^%d", atual -> termo.coeficiente, atual -> termo.grau);
         prim = 0;
         atual = atual -> prox;
     }
