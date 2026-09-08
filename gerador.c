@@ -7,6 +7,10 @@
 #define GRAUS_maximo 500000
 #define escala 20000
 
+int *geradordosgraus(int mval);
+double geradordeescala(void);
+void geradordepolinomio(char a, int *graus);
+
 int main(void){
 	srand(time(NULL)); //inicializa semente aleatória
 
