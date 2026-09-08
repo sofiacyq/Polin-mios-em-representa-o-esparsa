@@ -333,7 +333,7 @@ void escala(Polinomio *poli, long long C){
         No *atual;
         No *proximo;
         atual = poli -> inicio;
-        //liberando assim como em libe_poly_p
+        //liberando assim como em liberapoli
         while(atual != NULL){
             proximo = atual -> prox;
 
