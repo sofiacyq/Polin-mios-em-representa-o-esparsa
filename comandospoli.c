@@ -41,7 +41,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char nome[TAM];
             int j;
 
-            scanf("%s %d", nome, j);
+            scanf("%s %d", nome, &j);
 
             Polinomio *Novo = criapolinomio();
             for(int i = 0; i < j; i++){
