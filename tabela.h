@@ -23,7 +23,7 @@ typedef struct{
     int quant; //quantidade de nomes definidos dentro da tabela
 }Tabela;
 
-//mesma coisa de polilista.h, aqui tambem vamos colocar as  funcoes que vao ser criadas no tabela.c
+//mesma coisa de tadelista.h, aqui tambem vamos colocar as  funcoes que vao ser criadas no tabela.c
 void Cria_tabela(Tabela *tab);
 Polinomio *busca_tab(Tabela *tab, char *nome);
 void def_tab(Tabela *tab, char *nome, Polinomio *poli);
