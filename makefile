@@ -17,7 +17,7 @@ main: comandos-main.o tadelista.o tabela.o
 gerador: gerador.o
 	$(CC) $(CFLAGS) -o gerador$(EXE) gerador.o
 
-comandospoli.o: comandos-main.c tadelista.h tabela.h
+comandos-main.o: comandos-main.c tadelista.h tabela.h
 	$(CC) $(CFLAGS) -c comandos-main.c
 
 tadelista.o: tadelista.c tadelista.h
