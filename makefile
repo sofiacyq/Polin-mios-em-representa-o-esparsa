@@ -11,14 +11,14 @@ endif
 
 all: main gerador
 
-main: comandospoli.o tadelista.o tabela.o
-	$(CC) $(CFLAGS) -o main$(EXE) comandospoli.o tadelista.o tabela.o
+main: comandos-main.o tadelista.o tabela.o
+	$(CC) $(CFLAGS) -o main$(EXE) comandos-main.o tadelista.o tabela.o
 
 gerador: gerador.o
 	$(CC) $(CFLAGS) -o gerador$(EXE) gerador.o
 
-comandospoli.o: comandospoli.c tadelista.h tabela.h
-	$(CC) $(CFLAGS) -c comandospoli.c
+comandospoli.o: comandos-main.c tadelista.h tabela.h
+	$(CC) $(CFLAGS) -c comandos-main.c
 
 tadelista.o: tadelista.c tadelista.h
 	$(CC) $(CFLAGS) -c tadelista.c
