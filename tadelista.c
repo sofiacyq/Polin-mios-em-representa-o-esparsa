@@ -20,12 +20,11 @@ Polinomio *criapolinomio(void){
 
 void inserepoli(Polinomio *poli, long long coef, long long Grau){//para nao confundir a variavel grau do no tad é com g minusculo e da tadelista.c e maiusculo
     No *novoN; //criando um novo no
-    novoN = (No*)malloc(sizeof(No)); //alocando ele
-
     if(coef == 0){//se o coeficiente for 0, nao faça nada
         return;
     }
 
+    novoN = (No*)malloc(sizeof(No)); //alocando ele
     if(novoN == NULL){//caso de erro na alocacao
         return;
     }
