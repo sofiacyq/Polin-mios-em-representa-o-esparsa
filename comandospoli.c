@@ -41,7 +41,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char nome[TAM];
             int j;
 
-            scanf("%s %d", nome, &j);
+            scanf("%32s %d", nome, &j);
 
             Polinomio *Novo = criapolinomio();
             for(int i = 0; i < j; i++){
@@ -55,7 +55,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
         
         else if(strcmp(comando, "SOMA") == 0){
             char nA[TAM], nB[TAM], nresp[TAM];
-            scanf("%s %s %s", nA, nB, nresp);
+            scanf("%32s %32s %32s", nA, nB, nresp);
 
             Polinomio *A = busca_erro(&tab, nA);
             Polinomio *B = busca_erro(&tab, nB);
@@ -67,7 +67,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
 
         else if(strcmp(comando, "PROD") == 0){
             char nA[TAM], nB[TAM], nresp[TAM];
-            scanf("%s %s %s", nA, nB, nresp);
+            scanf("%32s %32s %32s", nA, nB, nresp);
 
             Polinomio *A = busca_erro(&tab, nA);
             Polinomio *B = busca_erro(&tab, nB);
@@ -81,7 +81,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long coef, Grau;
 
-            scanf("%s %lld %lld", Nome, &coef, &Grau);
+            scanf("%32s %lld %lld", Nome, &coef, &Grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
             inserepoli(A, coef, Grau);
@@ -91,7 +91,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long c;
 
-            scanf("%s %lld", Nome, &c);
+            scanf("%32s %lld", Nome, &c);
             
             Polinomio *A = busca_erro(&tab, Nome);
             escala(A, c);
@@ -101,7 +101,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long grau;
 
-            scanf("%s %lld", Nome, &grau);
+            scanf("%32s %lld", Nome, &grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
 
@@ -111,7 +111,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
         else if(strcmp(comando, "REMOVEMENOR") == 0){
             char Nome[TAM];
 
-            scanf("%s", Nome);
+            scanf("%32s", Nome);
 
             Polinomio *A = busca_erro(&tab, Nome);
 
@@ -121,7 +121,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
         else if(strcmp(comando, "LIBERA") == 0){
             char Nome[TAM];
 
-            scanf("%s", Nome);
+            scanf("%32s", Nome);
 
             busca_erro(&tab, Nome);
 
@@ -133,7 +133,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
             char Nome[TAM];
             long long Grau;
 
-            scanf("%s %lld", Nome, &Grau);
+            scanf("%32s %lld", Nome, &Grau);
 
             Polinomio *A = busca_erro(&tab, Nome);
             printf("%lld", coeficiente(A, Grau));
@@ -142,7 +142,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
         else if(strcmp(comando, "GRAU") == 0){
             char Nome[TAM];
 
-            scanf("%s", Nome);
+            scanf("%32s", Nome);
 
             Polinomio *A = busca_erro(&tab, Nome);
             printf("%lld", graumax(A));
@@ -150,7 +150,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
 
         else if(strcmp(comando, "IMPRIME") == 0){
             char Nome[TAM];
-            scanf("%s", Nome);
+            scanf("%32s", Nome);
 
             Polinomio *A = busca_erro(&tab, Nome);
             imprime_poli(A);
@@ -158,7 +158,7 @@ no tadelista.c e tabela.c, la ja tem as explicacoes */
 
         else if(strcmp(comando, "IMPRIMEINV") == 0){
             char Nome[TAM];
-            scanf("%s", Nome);
+            scanf("%32s", Nome);
 
             Polinomio *A = busca_erro(&tab, Nome);
             imprime_inverso(A);
